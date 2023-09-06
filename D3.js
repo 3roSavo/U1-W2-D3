@@ -1,5 +1,4 @@
-const starWarsCharacters = [
-  {
+const starWarsCharacters = [{
     name: "Luke Skywalker",
     height: 172,
     mass: 277,
@@ -140,11 +139,11 @@ console.log(femaleCharacters)
 */
 
 const eyeColor = {
-  blue : [],
-  yellow : [],
-  brown : [],
-  red : [],
-  "blue-gray" : []
+  blue: [],
+  yellow: [],
+  brown: [],
+  red: [],
+  "blue-gray": []
 }
 
 
@@ -153,9 +152,37 @@ const eyeColor = {
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
-/*switch (starWarsCharacters[0,1,2,3,4,5,6,7,8,9]) {
-  case  starWarsCharacters.eyeColor = "blue"
-/*
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  switch (starWarsCharacters[i].eye_color) {
+    case "blue":
+      eyeColor.blue.push(starWarsCharacters[i])
+
+      break
+
+    case "yellow":
+      eyeColor.yellow.push(starWarsCharacters[i])
+      break
+
+    case "brown":
+      eyeColor.brown.push(starWarsCharacters[i])
+      break
+
+    case "red":
+      eyeColor.red.push(starWarsCharacters[i])
+      break
+
+    case "blue-gray":
+      eyeColor["blue-gray"].push(starWarsCharacters[i])
+      break
+
+    default:
+      console.log("colore non riconosciuto")
+  }
+}
+console.log(eyeColor)
+
+
+
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
@@ -185,14 +212,14 @@ if (crewMass > 1000) {
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!")
 } else if (crewMass > 900) {
   console.log("Critical Load: Over 900")
-} else  if (crewMass > 700) {
+} else if (crewMass > 700) {
   console.log("Warning: Load is over 700")
 } else if (crewMass > 500) {
   console.log("Ship is half loaded")
 } else {
   console.log("Ship is under loaded")
 }
-  
+
 
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
@@ -200,7 +227,7 @@ if (crewMass > 1000) {
 
 let newArrey = []
 
-for (let i = 0; i < starWarsCharacters.length  ; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "n/a") {
     starWarsCharacters[i].gender = "robot"
   }
@@ -215,10 +242,12 @@ for (let i = 0; i < starWarsCharacters.length  ; i++) {
   Una volta fatto crea un console.log per controllare la proprietà length di "characters" prima e dopo l'operazione.
 */
 
+console.log(characters)
+
 for (let i = 0; i < characters.length; i++) {
   for (let i2 = 0; i2 < femaleCharacters.length; i2++) {
     if (characters[i] === femaleCharacters[i2].name) {
-      characters.splice(i,1)
+      characters.splice(i, 1)
     }
   }
 }
@@ -230,3 +259,11 @@ console.log(characters)
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
 
+/*
+for (let i = 0; i < starWarsCharacters)
+
+const validIndex = Math.floor(Math.random() * 10)
+console.log(validIndex)
+
+const = randomCharacter = starWarsCharacters[validIndex]
+*/
